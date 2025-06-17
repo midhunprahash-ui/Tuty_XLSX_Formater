@@ -1,7 +1,7 @@
 import pandas as pd
 import re
 
-df = pd.read_excel('/Users/midhun/Developer/Tuty_Project/Remand Accused Details (1)-1.xlsx')
+df = pd.read_excel('/Users/midhun/Developer/Git/Tuty_XLSX_Formater/Remand Accused Details (1)-1.xlsx')
 
 
 def split_cr_section(text):
@@ -24,6 +24,6 @@ def split_cr_section(text):
 df[['Cr.No', 'Section']] = df['Cr_no & Section'].apply(split_cr_section)
 
 # Save to Excel
-df.to_excel('/Users/midhun/Developer/Tuty_Project/Remand_Accused_Details_Processed.xlsx', index=False)
+df.to_excel('/Users/midhun/Developer/Git/Tuty_XLSX_Formater/Output/Processed.xlsx', index=False)
 
 print("File saved successfully!")
